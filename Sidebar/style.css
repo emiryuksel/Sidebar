@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    box-sizing: border-box;  /* ensures that paddings are not included in the width */
+    padding: 0;
+}
+
+body{
+    background: gray;
+}
+
+.fa-bars{
+    position: fixed;
+    top: 30px;
+    right: 45px;
+    font-size: 30px;
+    color: coral;
+    cursor: pointer; /* ensures the hand icon appears when hovered */
+}
+
+.fa-xmark{
+    cursor: pointer;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    height: 100%;
+    width: 500px;
+    transform:translate(-100%); /* open/close setting */
+    transition: 0.3s; /* speed of opening/closing */
+}
+
+.sidebarHeader{
+    text-align: right;
+    padding: 16px;
+}
+
+.showSidebar{
+    transform:translate(0%);
+}
+
+.menu a{                    /* 'a' used to affect the anchor tags inside */
+    text-decoration: none; /* removes the ugly underline from text */
+    color: gray;
+    font-size: 24px;
+    padding: 16px 24px;
+    display: block;
+}
+
+.menu a:hover{          /* hover means when hovered with the mouse */
+    background-color: coral;
+    color: white;
+    display: block;
+    padding-left: 30px;
+} 
+
+@media (max-width:768px){ /* applies to devices in tablet view */
+    .sidebar{
+        width: 100%;
+    }
+}
